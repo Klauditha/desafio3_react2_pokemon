@@ -1,10 +1,13 @@
 import "./App.css";
+import NavBar from "./components/NavBar/NavBar";
+import PokeRoutes from "./components/Routes/PokeRoutes";
 
 function App() {
   return (
     <>
       <div>
-        <h1>Pokemon</h1>
+       <NavBar />
+       <PokeRoutes/>
       </div>
     </>
   );
