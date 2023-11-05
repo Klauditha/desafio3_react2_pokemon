@@ -1,15 +1,14 @@
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar";
 import PokeRoutes from "./components/Routes/PokeRoutes";
+import { PokeProvider } from "./context/PokeProvider";
 
 function App() {
   return (
-    <>
-      <div>
-       <NavBar />
-       <PokeRoutes/>
-      </div>
-    </>
+    <PokeProvider>
+      <NavBar />
+      <PokeRoutes />
+    </PokeProvider>
   );
 }
 

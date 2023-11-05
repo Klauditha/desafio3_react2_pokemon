@@ -8,10 +8,15 @@ export const PokeProvider = ({ children }) => {
   const [pokemones, setPokemones] = useState([]);
   useEffect(() => {
     axios.get(URLBase).then((res) => {
+     // console.log(res.data.results);
       setPokemones(res.data.results);
       console.log(pokemones);
     });
   }, []);
 
-  return <PokeContext.Provider value={{pokemones}}>{children}</PokeContext.Provider>;
+  return (
+    <PokeContext.Provider value={{ pokemones }}>
+      {children}
+    </PokeContext.Provider>
+  );
 };

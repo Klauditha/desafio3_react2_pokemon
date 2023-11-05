@@ -7,7 +7,7 @@ const Home = () => {
         <img src={imagen} alt="profesor Oak" />
       </div>
       <p className="p-5">
-        En este sitio encontrarás toda la información necesario para aprender
+        En este sitio encontrarás toda la información necesaria para aprender
         sobre los pokemónes y ayudarte a enfrentar cada batalla.
       </p>
     </div>
