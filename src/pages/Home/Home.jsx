@@ -6,9 +6,9 @@ const Home = () => {
       <div className="flex justify-center">
         <img src={imagen} alt="profesor Oak" />
       </div>
-      <p className="p-5">
+      <p className="p-5 text-xl">
         En este sitio encontrarás toda la información necesaria para aprender
-        sobre los pokemónes y ayudarte a enfrentar cada batalla.
+        sobre los pokemones y ayudarte a enfrentar cada batalla.
       </p>
     </div>
   );
