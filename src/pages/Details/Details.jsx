@@ -18,19 +18,32 @@ const Details = () => {
               {pokemon.name}
             </h1>
             <div className="flex justify-center items-center">
-              <h3 className="text-center text-xl mt-2 font-bold"> Tipo(s) : </h3>
-              {pokemon.types ?
-                (pokemon.types.map((type) => (
-                  <h3 className="text-center text-xl mt-2 uppercase" key={type.type.name}>
+              <h3 className="text-center text-xl mt-2 font-bold">
+                {" "}
+                Tipo(s) :{" "}
+              </h3>
+              {pokemon.types ? (
+                pokemon.types.map((type) => (
+                  <h3
+                    className="text-center text-xl mt-2 uppercase"
+                    key={type.type.name}
+                  >
                     {type.type.name}
                   </h3>
-                ))) : (<h3  className="text-center text-xl mt-2 ">Desconocido</h3>)}
+                ))
+              ) : (
+                <h3 className="text-center text-xl mt-2 ">Desconocido</h3>
+              )}
             </div>
 
             <div className="flex justify-center items-center">
               <div>
                 {pokemon.sprites ? (
-                  <img src={pokemon.sprites.front_default} alt="" width={300} />
+                  <img
+                    src={pokemon.sprites.front_default}
+                    alt=""
+                    width={300}
+                  />
                 ) : null}
               </div>
               <div className="flex flex-col items-start content-center">
