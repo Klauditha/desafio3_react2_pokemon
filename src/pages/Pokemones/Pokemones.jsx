@@ -19,7 +19,7 @@ const Pokemones = () => {
             <option
               key={pokemon.url.split("/")[6]}
               className="m-6"
-              value={pokemon.url}
+              value={pokemon.name}
             >
               {pokemon.name.toUpperCase()}
             </option>
@@ -31,7 +31,7 @@ const Pokemones = () => {
         onClick={() =>
           navigate(
             `/pokemon/${
-              document.getElementById("pokemones").value.split("/")[6]
+              document.getElementById("pokemones").value
             }`
           )
         }

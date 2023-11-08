@@ -9,7 +9,7 @@ const PokeRoutes = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/pokemones" element={<Pokemones />} />
-      <Route path="/pokemon/:id" element={<Details />} />
+      <Route path="/pokemon/:name" element={<Details />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

@@ -2,12 +2,12 @@ import { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { PokeContext } from "../../context/PokeContext";
 const Details = () => {
-  const { pokemon, setId } = useContext(PokeContext);
-  const { id } = useParams();
+  const { pokemon, setName } = useContext(PokeContext);
+  const { name } = useParams();
 
   useEffect(() => {
-    setId(id);
-  }, [id]);
+    setName(name);
+  }, [name]);
 
   return (
     <div>

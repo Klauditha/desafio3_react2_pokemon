@@ -6,24 +6,25 @@ import axios from "axios";
 const URLBase = "https://pokeapi.co/api/v2/pokemon/";
 export const PokeProvider = ({ children }) => {
   const [pokemones, setPokemones] = useState([]);
-  const [id, setId] = useState(0);
+  const [name, setName] = useState("");
   const [pokemon, setPokemon] = useState({});
 
   useEffect(() => {
     axios.get(URLBase).then((res) => {
       setPokemones(res.data.results);
+      ("");
     });
   }, []);
 
   useEffect(() => {
-    if (id != 0) {
-      axios.get(URLBase + id).then((res) => {
+    if (name != "") {
+      axios.get(URLBase + name).then((res) => {
         setPokemon(res.data);
       });
     }
-  }, [id]);
+  }, [name]);
   return (
-    <PokeContext.Provider value={{ pokemones, setPokemon, pokemon, setId }}>
+    <PokeContext.Provider value={{ pokemones, setPokemon, pokemon, setName }}>
       {children}
     </PokeContext.Provider>
   );
